@@ -61,6 +61,22 @@ body{
     margin-right: 5%;
 }
 
+#footerContent{
+    height: 100%;
+    padding-top: 25px;
+    box-sizing: border-box;
+}
+
+#footerText{
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#footerMedia{
+    text-align: center;
+}
+
 /* -------------- MAIN LAYOUT ----------------- */
 
 /* -------------- COMMON CLASSES -------------- */
@@ -118,11 +134,8 @@ body{
     width: 50px;
     height: 50px;
     color: white;
-    background-color: #6D597A;
-}
-
-.roundIcon{
     font-size: 20px;
+    background-color: #6D597A;
 }
 
 .featureBlock p{
@@ -134,6 +147,11 @@ body{
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%); 
+}
+
+.centery{
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .textCenter{
@@ -155,7 +173,31 @@ body{
 
 .spanText{
     color: rgb(185, 185, 185);
-    font-size: 10pt;
+    font-size: 9pt;
+}
+
+.socialMediaIcon{
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    color: white;
+    font-size: 17px;
+    background-color: #E56B6F;
+}
+
+.socialMediaIcon:hover{
+    cursor: pointer;
+    background-color: #e26266;
+}
+
+.ml10{
+    margin-left: 10px;
+}
+
+.mr10{
+    margin-right: 10px;
 }
 
 /* -------------- COMMON CLASSES -------------- */
@@ -214,6 +256,25 @@ body{
         margin-right: 10%;
     }
 
+    #footerContent{
+        padding-top: 0;
+    }
+
+    #footerText{
+        width: 50%;
+        height: 100%;
+        text-align: left;
+        float: left;
+        padding: 0;
+    }
+
+    #footerMedia{
+        width: 50%;
+        height: 100%;
+        float: right;
+        text-align: right;
+    }
+
     /* -------------- MAIN LAYOUT --------------- */
 
     /* -------------- COMMON CLASSES -------------- */
@@ -262,6 +323,13 @@ body{
         float: right;
     }
 
+    #footerText{
+        padding-top: 30px;
+    }
+
+    #footerMediaContainer{
+        margin-top: 50px;
+    }
     /* -------------- SPECIFIC -------------------- */
 
 }
@@ -280,6 +348,14 @@ body{
         width: 70%;
         margin-left: 15%;
         margin-right: 15%;
+    }
+
+    #footerMediaContainer{
+        margin-top: 25px;
+    }
+
+    #footerText{
+        padding-top: 10px;
     }
 
 }

@@ -30,12 +30,12 @@
                     <div class="jumbotron">
                         <form>
                             <div id="searchInputContainer">
-                                <input type="email" class="customInput" placeholder="Enter email here">
+                                <input type="email" required class="customInput" placeholder="example@mail.com">
                                 <button id="submitFormBtn" class="customButton">Search</button>
                                 <div class="clearfix"></div>
                             </div>
                         </form>
-                        <span class="spanText"><i class="fa fa-lock"></i> Enter any email address</span>
+                        <span class="spanText"><i class="fa fa-lock"></i> Enter any email address. They won't be notified.</span>
                     </div>
                 </section>
             </div>
@@ -101,11 +101,24 @@
         </main>
         <footer id="mainFooter" class="customTextColorDark">
             <div id="footerContent">
-                <div class="footerRandomText">
-
+                <div id="footerText">
+                    <div class="footerCompanyLogo">
+                        <h3><i class="fa fa-bolt"></i> Lookup</h3> 
+                    </div>
+                    <span class="spanText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum a odio pariatur, similique nesciunt unde quo ut eaque hic tempora!</span>
                 </div>
-                <div class="footerSocialMedia">
-                    
+                <div id="footerMedia">
+                    <div id="footerMediaContainer">
+                        <div class="socialMediaIcon mr10">
+                            <i class="fa fa-facebook centerxy"></i>
+                        </div>
+                        <div class="socialMediaIcon mr10">
+                            <i class="fa fa-instagram centerxy"></i>
+                        </div>
+                        <div class="socialMediaIcon">
+                            <i class="fa fa-twitter centerxy"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </footer>
