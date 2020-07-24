@@ -15,7 +15,7 @@
 }
 
 body{
-    background-color: whitesmoke;
+    background-color: white;
 }
 
 
@@ -29,11 +29,18 @@ body{
 
 #mainHeader{
     color: white;
-    background-color: gray;
+    background-color: #355070;
 }
 
 #mainBody{
-    padding-bottom: 200px; /* Height of footer */
+    padding-bottom: 240px; /* Height of footer plus 40px of respect margin */
+}
+
+#upperBodyContent{
+    background-color: whitesmoke;
+    padding-bottom: 30px;
+    background-color: #ededed;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cpolygon fill='%23e8e8e8' points='120 120 60 120 90 90 120 60 120 0 120 0 60 60 0 0 0 60 30 90 60 120 120 120 '/%3E%3C/svg%3E");
 }
 
 #mainFooter{
@@ -48,7 +55,7 @@ body{
     padding: 10px 0px 10px 0px;
 }
 
-#headerContent, #bodyContent, #footerContent{
+#headerContent,#searchTitleSection,#searchBoxSection,#randomTextSection, #footerContent{
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
@@ -65,7 +72,7 @@ body{
 
 .jumbotron{
     background-color: white;
-    padding: 15px 20px 15px 20px;
+    padding: 20px 10px 20px 10px;
     border-radius: 5px;
     box-shadow: 0px 0px 4px -1px rgba(0,0,0,0.75);
 }
@@ -77,10 +84,9 @@ body{
 }
 
 .customInput{
-    border: none;
+    border: 1px whitesmoke solid;
     box-sizing: border-box;
     padding-left: 10px;
-    
 }
 
 .customInput:focus{
@@ -100,6 +106,58 @@ body{
     outline: none;
 }
 
+.featureBlock{
+    position: relative;
+    padding: 10px 0px 10px 0;
+    min-height: 50px;
+}
+
+.roundIcon{
+    position: absolute;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    color: white;
+    background-color: #6D597A;
+}
+
+.roundIcon{
+    font-size: 20px;
+}
+
+.featureBlock p{
+    margin-left: 60px;
+}
+
+.centerxy{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+.textCenter{
+    text-align: center;
+}
+
+.customTitle{
+    font-size: 25pt;
+    margin-bottom: 10px;
+}
+
+.customTextColor{
+    color: #444444;
+}
+
+.customTextColorDark{
+    color: #c7c7c7;
+}
+
+.spanText{
+    color: rgb(185, 185, 185);
+    font-size: 10pt;
+}
+
 /* -------------- COMMON CLASSES -------------- */
 
 /* -------------- SPECIFIC -------------------- */
@@ -116,13 +174,22 @@ body{
 #searchInputContainer input{
     width: 100%;
     height: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 #searchInputContainer button{
-    width: 40%;
+    width: 100%;
     height: 40px;
     background-color:#E56B6F;
     color: white;
+    margin-bottom: 10px;
+}
+
+#searchInputContainer button:hover{
+    background-color: #e26266;
+}
+
+#randomText{
+    padding: 20px 0 30px 0;
 }
 
 /* -------------- SPECIFIC -------------------- */
@@ -134,14 +201,14 @@ body{
 
 
     #mainBody{
-        padding-bottom: 150px; /* Height of footer */
+        padding-bottom: 190px; /* Height of footer plus 40px of respect margin*/
     }
 
     #mainFooter{
         height: 150px; /* Same as the margin-botom of #mainBody */
     }
 
-    #headerContent, #bodyContent, #footerContent{
+    #headerContent,#searchTitleSection,#searchBoxSection,#randomTextSection, #footerContent{
         width: 80%;
         margin-left: 10%;
         margin-right: 10%;
@@ -152,7 +219,11 @@ body{
     /* -------------- COMMON CLASSES -------------- */
 
     .jumbotron{
-        padding: 20px 50px 20px 50px;
+        padding: 30px 80px 30px 80px;
+    }
+
+    .featureBlock{
+        padding: 10px 20px 10px 0;
     }
 
     /* -------------- COMMON CLASSES -------------- */
@@ -169,17 +240,26 @@ body{
     }
 
     #searchInputContainer input{
-        width: 70%;
+        width: 68%;
         height: 100%;
         margin-bottom: 0;
         float: left;
-        border: none;
     }
     #searchInputContainer button{
         width: 30%;
         height: 100%;
         float: right;
         border: none;
+    }
+
+    #randomFeaturesColLeft{
+        width: 50%;
+        float: left;
+    }
+
+    #randomFeaturesColRight{
+        width: 50%;
+        float: right;
     }
 
     /* -------------- SPECIFIC -------------------- */
@@ -189,14 +269,14 @@ body{
 @media only screen and (min-width: 992px) { 
 
     #mainBody{
-        padding-bottom: 100px; /* Height of footer */
+        padding-bottom: 140px; /* Height of footer plus 40px of respect margin */
     }
 
     #mainFooter{
         height: 100px; /* Same as the margin-botom of #mainBody */
     }
 
-    #headerContent, #bodyContent, #footerContent{
+    #headerContent,#searchTitleSection,#searchBoxSection, #randomTextSection, #footerContent{
         width: 70%;
         margin-left: 15%;
         margin-right: 15%;
