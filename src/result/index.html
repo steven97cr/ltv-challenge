@@ -6,7 +6,8 @@
     <title>Project</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main id="mainContainer">
@@ -21,27 +22,36 @@
             <div id="upperBodyContent">
                 <section id="searchTitleSection">
                     <div id="randomTitleText" class="textCenter">
-                        <h1 class="customTitle">Search Any Email Address</h1>
+                        <h1 class="customTitle">Result</h1>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, quia!.</p>
                     </div>
                     
                 </section>
                 <section id="searchBoxSection">
                     <div class="jumbotron">
-                        <div id="formLoader" class="searchLoaderContainer">
-                            <div class="loaderRing ">
-                                <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+                        <div id="serchResultContainer">
+                            <div id="userNamePhoto">
+                                <div id="userPhoto"></div>
+                                <div id="userText">
+
+                                </div>
+                            </div>
+                            <div id="userText">
+
+                            </div>
+                            <div class="userInfoSection">
+
+                            </div>
+                            <div class="userInfoSection">
+                                
+                            </div>
+                            <div class="userInfoSection">
+                                
+                            </div>
+                            <div class="userInfoSection">
+                                
                             </div>
                         </div>
-                        <form id="searchForm">
-                            <div id="searchInputContainer">
-                                <input type="email" required class="customInput" placeholder="example@mail.com">
-                                <button id="submitFormBtn" class="customButton">Search</button>
-                                <div class="clearfix"></div>
-                            </div>
-                            <span class="spanText"><i class="fa fa-lock"></i> Enter any email address. They won't be notified.</span>
-                        </form>
-                        
                     </div>
                 </section>
             </div>
@@ -129,7 +139,7 @@
             </div>
         </footer>
     </main>
-    <script src="assets/js/index.js"></script>
+    <script src="../../assets/js/index.js"></script>
     <script>
         var mc = main({},function(){});
         console.log(JSON.parse(localStorage.getItem('requestResult')));

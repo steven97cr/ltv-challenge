@@ -1,0 +1,9 @@
+#userPhoto{
+    height: 50px;
+    width: 50px;
+    border: 2px whitesmoke solid;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
