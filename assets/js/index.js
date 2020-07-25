@@ -23,7 +23,7 @@ function main(data, callback){
         },
 
         setResultInfo: function(data){
-            document.querySelector("#userPhoto").
+            document.querySelector("#userPhoto").innerHTML = ""
         },
 
         toggleElement: function(selector){
