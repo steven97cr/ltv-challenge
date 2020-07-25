@@ -12,7 +12,7 @@
     <main id="mainContainer">
         <header id="mainHeader">
             <div id="headerContent">
-                <div id="headerCompanyLogo" class="headerTitle">
+                <div id="headerCompanyLogo">
                     <h2><i class="fa fa-bolt"></i> Lookup</h2>   
                 </div>
             </div>
@@ -22,7 +22,7 @@
                 <section id="searchTitleSection">
                     <div id="randomTitleText" class="textCenter">
                         <h1 class="customTitle">Search Any Email Address</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, quia!.</p>
+                        <p><span class="keywordColor">Start Here</span> - Look up the owner's name, photos and online profiles. See what you find!</p>
                     </div>
                     
                 </section>
@@ -35,13 +35,13 @@
                         </div>
                         <form id="searchForm">
                             <div id="searchInputContainer">
-                                <input type="email" required class="customInput" placeholder="example@mail.com">
+                                <input type="email" id="searchInput" required class="customInput" placeholder="example@mail.com">
                                 <button id="submitFormBtn" class="customButton">Search</button>
                                 <div class="clearfix"></div>
                             </div>
+                            <span class="spanTextError"><i class="fa fa-times"></i> Please add a valid email adress.</span><br>
                             <span class="spanText"><i class="fa fa-lock"></i> Enter any email address. They won't be notified.</span>
                         </form>
-                        
                     </div>
                 </section>
             </div>
@@ -131,7 +131,9 @@
     </main>
     <script src="assets/js/index.js"></script>
     <script>
-        var mc = main({},function(){});
+        var mc = main({
+            currentPage: "home"
+        },function(){});
         console.log(JSON.parse(localStorage.getItem('requestResult')));
     </script>
 </body>

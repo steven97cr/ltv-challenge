@@ -13,7 +13,7 @@
     <main id="mainContainer">
         <header id="mainHeader">
             <div id="headerContent">
-                <div id="headerCompanyLogo" class="headerTitle">
+                <div id="headerCompanyLogo">
                     <h2><i class="fa fa-bolt"></i> Lookup</h2>   
                 </div>
             </div>
@@ -23,33 +23,39 @@
                 <section id="searchTitleSection">
                     <div id="randomTitleText" class="textCenter">
                         <h1 class="customTitle">Result</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, quia!.</p>
+                        <p>Look at the result below to see the details of the person you're searched for.</p>
                     </div>
                     
                 </section>
                 <section id="searchBoxSection">
                     <div class="jumbotron">
-                        <div id="serchResultContainer">
+                        <div id="searchErrorContainer">
+                            <h1><i class="fa fa-exclamation-circle"></i> No person found, please try again.<h1>
+                        </div>
+                        <div id="searchResultContainer">
                             <div id="userNamePhoto">
                                 <div id="userPhoto"></div>
-                                <div id="userText">
-
+                                <div id="userName" class="">
+                                    <h2></h2>
+                                    <span class="spanText">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem, sunt.</span>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div>
+                                <div id="userInfoAddressSection" class="userInfoSection">
+                                    <h4>Address</h4>
+                                </div>
+                                <div id="userInfoEmailSection" class="userInfoSection">
+                                    <h4>Email</h4>
                                 </div>
                             </div>
-                            <div id="userText">
-
-                            </div>
-                            <div class="userInfoSection">
-
-                            </div>
-                            <div class="userInfoSection">
-                                
-                            </div>
-                            <div class="userInfoSection">
-                                
-                            </div>
-                            <div class="userInfoSection">
-                                
+                            <div>
+                                <div id="userInfoPhoneSection" class="userInfoSection">
+                                    <h4>Phone numbers</h4>
+                                </div>
+                                <div id="userInfoRelativesSection" class="userInfoSection">
+                                    <h4>Relatives</h4>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -58,60 +64,28 @@
             <div class="lowerBodyContent">
                 <section id="randomTextSection">
 
-                    <div id="randomText" class="textCenter">
-                        <h1 class="customTitle" >Reverse Email Lookup</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus id soluta odit mollitia ab officiis aliquam a, beatae expedita voluptates animi eius libero architecto eaque. Dolor explicabo doloribus voluptate laborum unde corrupti quam veniam tempore iure sit voluptatibus minus, molestias labore ad architecto vel ipsum obcaecati officia officiis voluptatum autem.</p>
+                    <div id="randomTitleText" class="textCenter">
+                        <h1 class="customTitle">Can't Find The Right Person?</h1>
+                        <p><span class="keywordColor">Try Again</span> - Make a new search</p>
+                    </div>
+                    <br>
+                    <div class="jumbotron">
+                        <div id="formLoader" class="searchLoaderContainer">
+                            <div class="loaderRing ">
+                                <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+                            </div>
+                        </div>
+                        <form id="searchForm">
+                            <div id="searchInputContainer">
+                                <input type="email" id="searchInput" required class="customInput" placeholder="example@mail.com">
+                                <button id="submitFormBtn" class="customButton">Search</button>
+                                <div class="clearfix"></div>
+                            </div>
+                            <span class="spanTextError"><i class="fa fa-times"></i> Please add a valid email adress.</span><br>
+                            <span class="spanText"><i class="fa fa-lock"></i> Enter any email address. They won't be notified.</span>
+                        </form>
                     </div>
 
-                    <div id="randomFeaturesColLeft">
-
-                        <div class="featureBlock">
-                            <div class="roundIcon">
-                                <i class="fa fa-address-book centerxy"></i>
-                            </div>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam, natus!</p>
-                        </div>
-
-                        <div class="featureBlock">
-                            <div class="roundIcon">
-                                <i class="fa fa-address-card centerxy"></i>
-                            </div>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam, natus!</p>
-                        </div>
-
-                        <div class="featureBlock">
-                            <div class="roundIcon">
-                                <i class="fa fa-user-circle-o centerxy"></i>
-                            </div>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam, natus!</p>
-                        </div>
-                    </div>
-
-                    <div id="randomFeaturesColRight">
-                        
-                        <div class="featureBlock">
-                            <div class="roundIcon">
-                                <i class="fa fa-envelope centerxy"></i>
-                            </div>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam, natus!</p>
-                        </div>
-
-                        <div class="featureBlock">
-                            <div class="roundIcon">
-                                <i class="fa fa-phone centerxy"></i>
-                            </div>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam, natus!</p>
-                        </div>
-
-                        <div class="featureBlock">
-                            <div class="roundIcon">
-                                <i class="fa fa-map centerxy"></i>
-                            </div>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam, natus!</p>
-                        </div>
-                    </div>
-
-                    <div class="clearfix"></div>
                 </section>
             </div>
         </main>
@@ -141,8 +115,9 @@
     </main>
     <script src="../../assets/js/index.js"></script>
     <script>
-        var mc = main({},function(){});
-        console.log(JSON.parse(localStorage.getItem('requestResult')));
+        var mc = main({
+            currentPage: "result"
+        },function(){});
     </script>
 </body>
 </html>

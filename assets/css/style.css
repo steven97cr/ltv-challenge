@@ -1,13 +1,15 @@
 @import 'loader.css';
 
-@font-face{
-    font-family: raleway;
-    src: url(../fonts/Raleway-VariableFont_wght.ttf);
-}
 
 @font-face{
     font-family: openSans;
     src: url(../fonts/OpenSans-Regular.ttf);
+}
+
+@font-face{
+    font-family: openSans;
+    font-weight: bold;
+    src: url(../fonts/OpenSans-Bold.ttf);
 }
 
 *{
@@ -83,11 +85,6 @@ body{
 
 /* -------------- COMMON CLASSES -------------- */
 
-.headerTitle{
-    font-family: raleway !important;
-    font-weight: 600 !important;
-}
-
 .jumbotron{
     background-color: white;
     padding: 20px 10px 20px 10px;
@@ -151,9 +148,12 @@ body{
     transform: translate(-50%, -50%); 
 }
 
-.centery{
-    display: table-cell;
-    vertical-align: middle;
+.centery {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 .textCenter{
@@ -176,6 +176,12 @@ body{
 .spanText{
     color: rgb(185, 185, 185);
     font-size: 9pt;
+}
+
+.spanTextError{
+    color: red;
+    font-size: 9pt;
+    display: none;
 }
 
 .socialMediaIcon{
@@ -204,6 +210,11 @@ body{
 
 .customDisplayNone{
     display: none;
+}
+
+.keywordColor{
+    color: #e26266;
+    font-weight: bold;
 }
 
 /* -------------- COMMON CLASSES -------------- */
