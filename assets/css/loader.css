@@ -35,8 +35,8 @@
   }
 
 .searchLoaderContainer{
-    height: 100%;
+    height: 85px;
     width: 100%;
-    display: none;
     position: relative;
+    display: none;
 }

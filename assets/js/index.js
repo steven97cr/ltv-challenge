@@ -84,6 +84,9 @@ function main(data, callback){
 
         searchEmail: function(){
             if(cl.valitateEmailInput("#searchInput")){
+                document.querySelector("#searchForm").style.display = "none";
+                document.querySelector('#searchFormErrorContainer').style.display = "none"
+                document.querySelector("#formLoader").style.display = "block";
                 var val = document.querySelector("#searchInput").value;
                 cl.makeHttpRequest('GET', 'https://ltv-data-api.herokuapp.com/api/v1/records.json?email='+val, {}, 
                 function(response){
@@ -96,12 +99,15 @@ function main(data, callback){
                             window.location.href = './src/result/index.html';
                         }
                     }else{
-                        document.querySelector('#searchFormErrorContainer').style.display = "block"
+                        document.querySelector("#formLoader").style.display = "none";
+                        document.querySelector("#searchFormErrorContainer").style.display = "block"
+                        document.querySelector("#searchForm").style.display = "block";
+                        
                     }
                 },
-                function(err){
-                    console.log(err)
-                })
+                function(){
+                    alert("Request error!")
+                });
             }
         },
 
@@ -120,7 +126,7 @@ function main(data, callback){
 
             var req = new XMLHttpRequest();
             req.onload = function(){success(req.response)};
-            req.onerror = function(){error(req.response)};
+            req.onerror = function(){error()};
             req.open(method, cr+url, true);
             req.send();
         },
