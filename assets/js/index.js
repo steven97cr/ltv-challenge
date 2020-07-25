@@ -93,8 +93,10 @@ function main(data, callback){
                         if(cl.page == "result"){
                             document.location.reload();
                         }else{
-                            window.location.href = './src/result';
+                            window.location.href = './src/result/index.html';
                         }
+                    }else{
+                        document.querySelector('#searchFormErrorContainer').style.display = "block"
                     }
                 },
                 function(err){

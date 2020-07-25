@@ -184,6 +184,10 @@ body{
     display: none;
 }
 
+.warningColor{
+    color: #e2b962;
+}
+
 .socialMediaIcon{
     position: relative;
     display: inline-block;
@@ -249,6 +253,11 @@ body{
 
 #randomText{
     padding: 20px 0 30px 0;
+}
+
+#searchErrorContainer, #searchFormErrorContainer{
+    display: none;
+    margin-bottom: 10px;
 }
 
 /* -------------- SPECIFIC -------------------- */
